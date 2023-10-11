@@ -14,21 +14,10 @@
  * limitations under the License.
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* color scheme can go here as different variables, so they're reusable across components */
-:root {
-  --foreground-rgb: 255,255,255;
-  /* header color / header font */
-  /* etc */
-}
-
-/* dark mode goes here */
-/* @media (prefers-color-scheme: dark) {
-} */
-
-body {
-  background-color: rgb(var(--foreground-rgb));
+export default function Navbar() {
+  return (
+    <main className="">
+      <p>navbar goes here</p>
+    </main>
+  )
 }
