@@ -16,6 +16,7 @@
 import { getContentData } from "../common/general_parser";
 import Navbar from '@/common/Navbar'
 import Banner from '@/common/banner'
+
 import { ProjectMetaData } from "@/schemas/ProjectMetaData";
 import { ImpactMetaData } from "@/schemas/ImpactMetaData";
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
