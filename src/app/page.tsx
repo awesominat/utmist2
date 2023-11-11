@@ -20,6 +20,7 @@ import WhatWeDo from './WhatWeDo/page'
 import { ProjectMetaData } from "@/schemas/ProjectMetaData";
 import { ImpactMetaData } from "@/schemas/ImpactMetaData";
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
+import WhatWeDo from './WhatWeDo/page'
 
 export default function HomePage() {
 
