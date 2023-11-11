@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2023 UTMIST (utorontomist@gmail.com)
  *
@@ -20,6 +21,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/common/Navbar'
 import HomePage from './page'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -40,6 +42,7 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"/>
       </head>
       <body className={inter.className}>
+      <Navbar />
         {children}
         </body>
     </html>
