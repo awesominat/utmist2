@@ -16,6 +16,7 @@
 
 import Navbar from '@/common/Navbar'
 import Banner from '@/common/banner'
+import WhatWeDo from './WhatWeDo/page'
 
 export default function HomePage() {
   return (
