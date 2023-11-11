@@ -27,8 +27,8 @@ export default function Navbar() {
   };
 
   return (
-      <main>
-        <nav className="fixed font-roboto-mono bg-[#1E1E1E] w-full">
+      <>
+        <nav className="fixed font-roboto-mono bg-[#1E1E1E] z-10 w-full">
           <div className="flex justify-between items-center px-4">
               <Link href="/">
                 <Image src={logo} alt="logo" className="mt-2 cursor-pointer" />
@@ -90,7 +90,8 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
-      </main>
+        {/* <br></br> <br></br> */}
+      </>
   );
 }
 
