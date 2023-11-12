@@ -15,7 +15,7 @@ export default function Banner() {
             egestas, lorem id dapibus accumsan.
           </div>
           <LinkButton
-            redirectPath="/WhatWeDo"
+            redirectPath="/whatWeDo"
             buttonText="Join Us"
           ></LinkButton>
         </div>
