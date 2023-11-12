@@ -1,7 +1,7 @@
 "use client";
 
 import InfoCard from "./InfoCard";
-import { getContentData } from "@pages/general_parser";
+import { getContentData } from "@/common/general_parser";
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
 
 interface WhatWeDoProps {
