@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SmallCard(props: {title: string, imgPath: string, buttonHref: string}) {
   const className = "lg:w-[19vw] lg:h-[25vh] sm:w-[40vw] sm:h-[40vw] border border-white bg-[".concat(props.imgPath).concat("]")
-  console.log(className)
+  String 
   return (
     <div className={className}>
       <Link href={props.buttonHref}>
@@ -11,7 +11,6 @@ export default function SmallCard(props: {title: string, imgPath: string, button
           {props.title}
         </div>
       </Link>
-
     </div>
   );
 }

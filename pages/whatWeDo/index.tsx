@@ -11,9 +11,8 @@ interface WhatWeDoProps {
 const whatWeDo: React.FC<WhatWeDoProps> = ({ data }) => {
   const infoCards = data.map((item) => {
     return (
-      <div className="mb-[14.9vh]">
+      <div key={item.slug} className="mb-[14.9vh]">
         <InfoCard
-          key={item.title}
           title={item.title}
           imgPath={item.imgPath}
           buttonHref={item.buttonHref}

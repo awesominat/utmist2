@@ -11,7 +11,7 @@ interface WWdHomepageProps {
 const WwdHomepage: React.FC<WWdHomepageProps> = ({data}) => {
 
   const smallCards = data.map((item) => {
-    return <SmallCard imgPath={item.imgPath} buttonHref={item.buttonHref} title={item.title}></SmallCard>
+    return <SmallCard key={item.slug} imgPath={item.imgPath} buttonHref={item.buttonHref} title={item.title}></SmallCard>
   })
 
   const [isMobile, setIsMobile] = useState(false);

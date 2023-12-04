@@ -31,8 +31,6 @@ export async function getStaticProps() {
     "projects"
   );
 
-  console.log(data)
-
   return {
     props: {
       data,
