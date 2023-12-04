@@ -16,6 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Navbar />
+
+
       <Component {...pageProps} />
     </>
   );
