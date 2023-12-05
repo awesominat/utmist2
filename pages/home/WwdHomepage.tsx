@@ -1,7 +1,7 @@
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
 import { getContentData } from "@/common/general_parser";
 import React, { useEffect, useState } from "react";
-import SmallCard from "./SmallCard";
+import SmallCard from "../../src/components/home/SmallCard";
 import LinkButton from "@/common/LinkButton";
 import LinkButtonSmall from "@/common/LinkButtonSmall";
 

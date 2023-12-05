@@ -1,6 +1,6 @@
 "use client";
 
-import InfoCard from "./InfoCard";
+import InfoCard from "../../src/components/whatWeDo/InfoCard";
 import { getContentData } from "@/common/general_parser";
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
 

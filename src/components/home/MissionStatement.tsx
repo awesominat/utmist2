@@ -1,15 +1,14 @@
 import Image from "next/image";
 import logo from "public/assets/mission-img.svg";
-import {getContentData} from "../../src/common/general_parser"
-import {WWeDoMetaData} from "../../src/schemas/WWeDoMetaData"
-import LinkButton from "../../src/common/LinkButton";
+import {getContentData} from "../../common/general_parser"
+import {WWeDoMetaData} from "../../schemas/WWeDoMetaData"
+import LinkButton from "../../common/LinkButton";
 import { MissionMetaData } from "@/schemas/MissionMetaData";
 //import {useEffect, useState } from "react";
 interface MissionProps {
     data: MissionMetaData[];
 }
 const MissionStatement: React.FC<MissionProps> = ({ data }) => {
-
     return (<div className="overflow-x-hidden">
         <div className="relative bg-cover bg-mission w-screen h-[120vh]  lg:h-[90vh]">
             {/*    Mobile screens*/}
