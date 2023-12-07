@@ -7,7 +7,6 @@ export default function InfoCard(props: {
   imgPath: string;
   buttonHref: string;
 }) {
-  console.log("w-[40%] h-[100%] bg-".concat(props.imgPath).concat(" bg-cover"));
   return (
     <div className="flex w-[78.8vw] h-[53vh] bg-[#121212] rounded-md shadow-md">
       <div

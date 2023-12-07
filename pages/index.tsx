@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { getContentData } from "@/common/general_parser";
-import MissionStatement from "./home/MissionStatement";
+import MissionStatement from "../src/components/home/MissionStatement";
 import Banner from "@/common/banner";
 import { MissionMetaData } from "@/schemas/MissionMetaData";
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
@@ -34,7 +34,7 @@ const HomePage: React.FC<MissionProp> = ({wwdData, data }) => {
             <Banner />
     
             <MissionStatement data={data} />
-            <WwdHomepage data={wwdData}></WwdHomepage>
+            <WwdHomepage data={wwdData} />
         </>
     );
 };

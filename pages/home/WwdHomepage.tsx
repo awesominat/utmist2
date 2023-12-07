@@ -1,7 +1,7 @@
 import { WWeDoMetaData } from "@/schemas/WWeDoMetaData";
 import { getContentData } from "@/common/general_parser";
 import React, { useEffect, useState } from "react";
-import SmallCard from "./SmallCard";
+import SmallCard from "../../src/components/home/SmallCard";
 import LinkButton from "@/common/LinkButton";
 import LinkButtonSmall from "@/common/LinkButtonSmall";
 
@@ -11,7 +11,7 @@ interface WWdHomepageProps {
 const WwdHomepage: React.FC<WWdHomepageProps> = ({data}) => {
 
   const smallCards = data.map((item) => {
-    return <SmallCard imgPath={item.imgPath} buttonHref={item.buttonHref} title={item.title}></SmallCard>
+    return <SmallCard key={item.slug} imgPath={item.imgPath} buttonHref={item.buttonHref} title={item.title}></SmallCard>
   })
 
   const [isMobile, setIsMobile] = useState(false);
