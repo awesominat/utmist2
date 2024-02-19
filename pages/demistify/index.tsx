@@ -47,7 +47,7 @@ const AllIssues: React.FC<DemistifyProp> = ({ data }) => {
         })
         .map((item, ind) => {
             return (
-                <div className="rounded-md overflow-hidden bg-black shadow-lg w-362">
+                <div key={ind} className="rounded-md overflow-hidden bg-black shadow-lg w-362">
                     <img className="w-full h-315" src={item.imgPath} alt="Card Image" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-white font-roboto-mono">{item.publishDate}</div>
