@@ -48,7 +48,7 @@ const AllIssues: React.FC<DemistifyProp> = ({ data }) => {
         .map((item, ind) => {
             return (
                 <div key={ind} className="rounded-md overflow-hidden bg-black shadow-lg w-362">
-                    <img className="w-full h-315" src={item.imgPath} alt="Card Image" />
+                    <Image className="w-full h-315" src={item.imgPath} alt="Card Image" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-white font-roboto-mono">{item.publishDate}</div>
                         <div className="font-bold text-white font-roboto-mono">{item.issueNumber}</div>
@@ -96,8 +96,8 @@ const AllIssues: React.FC<DemistifyProp> = ({ data }) => {
                      return (
                          <div className="rounded-md overflow-hidden bg-black shadow-lg w-full flex flex-col" key={ind}>
                              <div>
-                                 <img className="w-full h-40 object-cover" src={item.imgPath} alt="Card Image" />
-                                 <img className="w-full h-40 object-cover" src={item.issueNumber} alt="Card Image" />
+                                 <Image className="w-full h-40 object-cover" src={item.imgPath} alt="Card Image" />
+                                 <Image className="w-full h-40 object-cover" src={item.issueNumber} alt="Card Image" />
                              </div>
                              <div className="px-6 py-4 flex-grow">
                                  <p className="text-white font-roboto-mono">
