@@ -11,7 +11,8 @@ export default function Banner() {
                 University of Toronto Machine Intelligence Student Team
               </div>
               <div className="w-[55vw] text-[2.8vh] ml-[24.6vw] mb-[7.5vh] lg:w-[45vw] lg:text-[2.4vh] lg:ml-[5.7vw] lg:mb-[8vh]">
-                Empower the next generation of AI researchers, engineers, and leaders.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                egestas, lorem id dapibus accumsan.
               </div>
               <div className="px-[15vw] lg:px-[17.7vw]">
               <LinkButton
