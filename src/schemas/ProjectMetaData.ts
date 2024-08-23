@@ -18,5 +18,7 @@ export interface ProjectMetaData extends BaseMetaData {
   publishDate: string; // YYYY-MM-DD
   team: TeamMember[]; // team members
   description: string;
+  youtube: string;
+  proposal: string;
   images: string[]; // paths to public img of project
 }
