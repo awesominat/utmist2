@@ -17,8 +17,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/assets/UTMIST logo.png";
-import Hamburger from "../../public/assets/Hamburger.png";
+import logo from "public/assets/UTMIST logo.png";
+import Hamburger from "public/assets/Hamburger.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
