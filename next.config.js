@@ -1,7 +1,6 @@
 const path = require('path');
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   webpack: (config, { isServer }) => {
     // Add an alias for the public directory
     config.resolve.alias['public'] = path.join(__dirname, 'public');
@@ -9,5 +8,3 @@ const nextConfig = {
     return config;
   },
 };
-
-module.exports = nextConfig;
