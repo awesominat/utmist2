@@ -1,4 +1,4 @@
-import { BaseMetaData } from "./BaseMetaData";
+import { BaseMetaData } from "./BaseMetaData"; 
 
 export interface TeamMember {
     name: string;
