@@ -1,5 +1,6 @@
 import { BaseMetaData } from "./BaseMetaData"; 
 
+
 export interface TeamMember {
     name: string;
     image?: string;
