@@ -37,6 +37,14 @@ export default function Navbar() {
     setProfileMenuOpen(!profileMenuOpen);
   };
 
+  const handleSignIn = () => {
+    const currentUrl = window.location.origin + '/dashboard';
+    signIn('google', { 
+      callbackUrl: currentUrl,
+      redirect_uri: 'https://utmist2.vercel.app/api/auth/callback/google'
+    });
+  };
+
   return (
     <>
       <nav className="fixed font-roboto-mono bg-[#1E1E1E] z-10 w-full h-14 flex items-center">
@@ -97,7 +105,7 @@ export default function Navbar() {
               ) : (
                 <li className="inline-block ml-10">
                   <button
-                    onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+                    onClick={handleSignIn}
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                   >
                     Login
@@ -147,7 +155,9 @@ export default function Navbar() {
                 </>
               ) : (
                 <li className="text-white mt-2">
-                  <button onClick={() => signIn('google')}>Login</button>
+                  <button onClick={handleSignIn}>
+                    Login
+                  </button>
                 </li>
               )}
             </ul>

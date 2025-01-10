@@ -9,14 +9,11 @@ import '@/styles/globals.css';
 import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-  const router = useRouter();
-  const isDashboard = router.pathname === '/dashboard';
-
   return (
     <SessionProvider session={session}>
-      {!isDashboard && <Navbar />}
+      <Navbar />
       <Component {...pageProps} />
-      {!isDashboard && <Footer />}
+      <Footer />
     </SessionProvider>
   );
 }
