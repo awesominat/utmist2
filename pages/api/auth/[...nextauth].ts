@@ -25,7 +25,13 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          redirect_uri: 'https://utmist2.vercel.app/api/auth/callback/google'
+        }
+      }
     }),
+    
   ],
   secret: process.env.NEXTAUTH_SECRET!,
   adapter: CustomFirestoreAdapter(firebaseAdminConfig),
@@ -63,7 +69,6 @@ export default NextAuth({
       return session;
     },
     async redirect({ url, baseUrl }) {
-      // Always redirect to the dashboard after sign-in
       return `${baseUrl}/dashboard`;
     },
   },
