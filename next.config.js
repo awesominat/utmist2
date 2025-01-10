@@ -8,6 +8,9 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    domains: [
+      'lh3.googleusercontent.com',  // For Google OAuth profile pictures
+      'i.pravatar.cc',             // For preview user avatar
+    ],
   },
 };
