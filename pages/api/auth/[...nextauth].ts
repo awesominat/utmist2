@@ -66,20 +66,10 @@ export default NextAuth({
       return session;
     },
     async redirect({ url, baseUrl }) {
-      try {
-        const returnTo = new URL(url).searchParams.get('returnTo');
-        if (returnTo) {
-          return returnTo;
-        }
-      } catch (e) {
+      if (url.startsWith('http')) {
+        return url;
       }
-      
-      try {
-        const currentUrl = new URL(url);
-        return `${currentUrl.origin}/dashboard`;
-      } catch (e) {
-        return `${baseUrl}/dashboard`;
-      }
+      return `${baseUrl}${url.startsWith('/') ? '' : '/'}${url}`;
     },
   },
 });
