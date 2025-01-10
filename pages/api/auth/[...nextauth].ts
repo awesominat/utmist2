@@ -5,7 +5,7 @@ import { initializeApp, getApps } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { CustomFirestoreAdapter } from '@/lib/customFirestoreAdapter';
 
-// Firebase Admin SDK configuration
+// Firebase Admin SDK configuration 
 const firebaseAdminConfig = {
   credential: cert({
     projectId: process.env.FIREBASE_PROJECT_ID!,
