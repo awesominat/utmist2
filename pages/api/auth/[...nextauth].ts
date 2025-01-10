@@ -27,6 +27,7 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET!,
   adapter: CustomFirestoreAdapter(firebaseAdminConfig),
   pages: {
     // signIn: '/auth/signin', // Optional: Define if you have a custom sign-in page
