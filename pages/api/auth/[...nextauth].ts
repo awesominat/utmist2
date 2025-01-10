@@ -25,11 +25,6 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-      // authorization: {
-      //   params: {
-      //     redirect_uri: 'https://utmist2.vercel.app/api/auth/callback/google'
-      //   }
-      // }
     }),
     
   ],
@@ -70,15 +65,19 @@ export default NextAuth({
     },
     async redirect({ url, baseUrl }) {
       try {
-        const parsedUrl = new URL(url);
-        const from = parsedUrl.searchParams.get("from");
-
-        if (from) {
-          return `${from}/dashboard`;
+        const returnTo = new URL(url).searchParams.get('returnTo');
+        if (returnTo) {
+          return returnTo;
         }
       } catch (e) {
       }
-      return `${baseUrl}/dashboard`;
+      
+      try {
+        const currentUrl = new URL(url);
+        return `${currentUrl.origin}/dashboard`;
+      } catch (e) {
+        return `${baseUrl}/dashboard`;
+      }
     },
   },
 });
