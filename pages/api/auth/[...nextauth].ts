@@ -14,8 +14,6 @@ const firebaseAdminConfig = {
   }),
 };
 
-// force vercel
-
 if (!getApps().length) {
   initializeApp(firebaseAdminConfig);
 }
@@ -25,8 +23,12 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          redirect_uri: 'https://utmist2.vercel.app/api/auth/callback/google',
+        },
+      },
     }),
-    
   ],
   secret: process.env.NEXTAUTH_SECRET!,
   adapter: CustomFirestoreAdapter(firebaseAdminConfig),
